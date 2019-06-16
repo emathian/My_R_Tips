@@ -1,0 +1,29 @@
+#################################
+# Change the current R version  #
+#################################
+
+1. Display the installed R version :
+
+ ls -l /Library/Frameworks/R.framework/Versions/
+total 0
+drwxrwxr-x  7 root  admin  224 16 jui 20:54 3.3
+drwxrwxr-x  3 root  admin   96  3 mai 20:14 3.5
+drwxrwxr-x  7 root  admin  224 16 jui 20:59 3.6
+lrwxr-xr-x  1 root  admin    3 16 jui 20:03 Current -> 3.6
+
+2. Delete the current alias : 
+
+unlink Current
+
+3. Create a new alias :
+
+ln -s 3.3 Current
+
+4. Checked the modification : 
+
+ls -l
+total 0
+drwxrwxr-x  6 root     admin  192 16 jui 21:04 3.3
+drwxrwxr-x  3 root     admin   96  3 mai 20:14 3.5
+drwxrwxr-x  6 root     admin  192 16 jui 22:29 3.6
+lrwxr-xr-x  1 mathian  admin    3 16 jui 22:32 Current -> 3.3
